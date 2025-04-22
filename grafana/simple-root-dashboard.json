@@ -123,7 +123,21 @@
     "schemaVersion": 41,
     "tags": [],
     "templating": {
-      "list": []
+      "list": [
+        {
+          "current": {
+            "text": "grafana-testdata-datasource",
+            "value": "cejobd88i85j4d"
+          },
+          "hide": 2,
+          "name": "ds",
+          "options": [],
+          "query": "grafana-testdata-datasource",
+          "refresh": 1,
+          "regex": "",
+          "type": "datasource"
+        }
+      ]
     },
     "time": {
       "from": "now-6h",
