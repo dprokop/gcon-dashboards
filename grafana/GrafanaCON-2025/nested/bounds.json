@@ -29,7 +29,7 @@
       {
         "datasource": {
           "type": "grafana-testdata-datasource",
-          "uid": "bei9i2e9wh6o0b"
+          "uid": "cejobd88i85j4d"
         },
         "fieldConfig": {
           "defaults": {
