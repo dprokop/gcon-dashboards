@@ -65,8 +65,8 @@
           "overrides": []
         },
         "gridPos": {
-          "h": 8,
-          "w": 12,
+          "h": 9,
+          "w": 17,
           "x": 0,
           "y": 0
         },
@@ -99,7 +99,7 @@
             "seriesCount": 5
           }
         ],
-        "title": "New panel",
+        "title": "Reds",
         "type": "state-timeline"
       }
     ],
