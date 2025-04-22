@@ -62,7 +62,7 @@
             "mode": "scheme",
             "reverse": false,
             "scale": "exponential",
-            "scheme": "Oranges",
+            "scheme": "Spectral",
             "steps": 64
           },
           "exemplars": {
