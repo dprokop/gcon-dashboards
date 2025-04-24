@@ -26,21 +26,12 @@ export class Client {
     }
 
     public async findOrCreateFolder(name: string): Promise<string> {
-        let searchResponse;
-        try {
-
-            const url = this.url(`/api/search?type=dash-folder&query=${encodeURIComponent(name)}`);
-            console.log(`Fetching folder from Grafana: ${url}`);
-             searchResponse = await fetch(url, {
-                headers: {Authorization: this.authHeader()},
-            }).then(response => response.json() as Promise<folder[]>);
-        } catch (error) {
-            console.error(`Error fetching folder: ${error}`);
-            throw new Error(`Failed to fetch folder: ${error}`);
-        }
+        const searchResponse = await fetch(this.url(`/api/search?type=dash-folder&query=${encodeURIComponent(name)}`), {
+            headers: {Authorization: this.authHeader()},
+        }).then(response => response.json() as Promise<folder[]>);
 
         // The folder exists.
-        if (searchResponse?.length === 1) {
+        if (searchResponse.length === 1) {
             return searchResponse[0].uid;
         }
 

@@ -21,17 +21,13 @@ const deployDashboard = async (dashboard: DashboardBuilder): Promise<void> => {
 
 const generateManifest = async (dashboard: DashboardBuilder): Promise<void> => {
     const grafana = Client.withConfigFromEnv(process.env);
-    console.log(`grafana host: ${grafana}`);
     const builtDashboard = dashboard.build();
 
     if (!fs.existsSync(manifestsDir)) {
-        console.log(`creating ${manifestsDir} directory...`);
         fs.mkdirSync(manifestsDir);
     }
 
-    console.log(`creating folder ${dashboardFolderName}...`);
     const folderUid = await grafana.findOrCreateFolder(dashboardFolderName);
-    console.log(`folder uid: ${folderUid}`);
     const manifest = dashboardManifest(folderUid, builtDashboard);
     const manifestYaml = yaml.stringify(JSON.parse(JSON.stringify(manifest)));
 
@@ -62,8 +58,6 @@ const generateManifest = async (dashboard: DashboardBuilder): Promise<void> => {
     }
     
     if (manifests) {
-
-        console.log('Generating manifest...');
         // Generate a dashboard manifest for the test dashboard and write it to disk.
         await generateManifest(dashboard);
         return;
