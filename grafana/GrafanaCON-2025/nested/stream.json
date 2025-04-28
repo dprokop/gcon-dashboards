@@ -29,7 +29,7 @@
       {
         "datasource": {
           "type": "grafana-testdata-datasource",
-          "uid": "cejobd88i85j4d"
+          "uid": "${ds}"
         },
         "fieldConfig": {
           "defaults": {
@@ -159,13 +159,13 @@
             "sort": "none"
           }
         },
-        "pluginVersion": "12.0.0-pre",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "alias": "Mean",
             "datasource": {
               "type": "grafana-testdata-datasource",
-              "uid": "bei9i2e9wh6o0b"
+              "uid": "${ds}"
             },
             "refId": "A",
             "scenarioId": "streaming_client",
@@ -231,7 +231,7 @@
           "textMode": "auto",
           "wideLayout": true
         },
-        "pluginVersion": "12.0.0-pre",
+        "pluginVersion": "12.1.0-pre",
         "targets": [
           {
             "datasource": {
@@ -251,7 +251,21 @@
     "schemaVersion": 41,
     "tags": [],
     "templating": {
-      "list": []
+      "list": [
+        {
+          "current": {
+            "text": "grafana-testdata-datasource",
+            "value": "cejobd88i85j4d"
+          },
+          "hide": 2,
+          "name": "ds",
+          "options": [],
+          "query": "grafana-testdata-datasource",
+          "refresh": 1,
+          "regex": "",
+          "type": "datasource"
+        }
+      ]
     },
     "time": {
       "from": "now-30s",
