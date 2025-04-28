@@ -30,13 +30,10 @@ export const exampleDashboard = (): DashboardBuilder => {
     ;
 
     builder
-        .withPanel(prometheusVersionStat())
-        .withPanel(descriptionText())
-        .withPanel(unfilteredLogs())
-        .withPanel(prometheusGoroutinesTimeseries())
-    ;
+        .withPanel(grafanaGoroutinesTimeseries())
+        .withPanel(descriptionText());
 
-    return builder;
+    return builder;  
 };
 
 export const prometheusVersionStat = (): stat.PanelBuilder => {
@@ -71,11 +68,11 @@ export const unfilteredLogs = (): logs.PanelBuilder => {
     ;
 };
 
-export const prometheusGoroutinesTimeseries = (): timeseries.PanelBuilder => {
+export const grafanaGoroutinesTimeseries = (): timeseries.PanelBuilder => {
     return timeseriesPanel()
-        .title('Prometheus goroutines')
+        .title('Grafana goroutines')
         .withTarget(
-            prometheusQuery(`go_goroutines{job="prometheus"}`)
+            prometheusQuery(`go_goroutines{job="grafana"}`)
         )
         .datasource(prometheusDatasourceRef())
     ;

@@ -27,7 +27,8 @@
           "transparent": true,
           "type": "text"
         }
-      ]
+      ],
+      "schemaVersion": 41
     }
   }
   

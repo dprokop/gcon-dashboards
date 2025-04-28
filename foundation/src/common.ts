@@ -81,7 +81,7 @@ export const lokiQuery = (expression: string): loki.DataqueryBuilder => {
 export const prometheusDatasourceRef = (): DataSourceRef => {
 	return {
 		type: 'prometheus',
-		uid:  'prometheus',
+		uid:  'gdev-prometheus',
 	};
 };
 
