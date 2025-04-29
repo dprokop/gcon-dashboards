@@ -6,9 +6,9 @@ import * as common from '@grafana/grafana-foundation-sdk/common';
 import * as logs from '@grafana/grafana-foundation-sdk/logs';
 import * as stat from '@grafana/grafana-foundation-sdk/stat';
 import * as text from '@grafana/grafana-foundation-sdk/text';
+import * as prometheus from '@grafana/grafana-foundation-sdk/prometheus';
 import * as timeseries from '@grafana/grafana-foundation-sdk/timeseries';
 import {
-    instantPrometheusQuery,
     logPanel,
     lokiDatasourceRef,
     lokiQuery,
@@ -49,6 +49,15 @@ export const prometheusVersionStat = (): stat.PanelBuilder => {
                 .calcs(['last'])
                 .fields('/^version$/')
         )
+    ;
+};
+
+ const instantPrometheusQuery = (expression: string): prometheus.DataqueryBuilder => {
+    return new prometheus.DataqueryBuilder()
+        .expr(expression)
+        .instant()
+        .format(prometheus.PromQueryFormat.Table)
+        .legendFormat('__auto')
     ;
 };
 
