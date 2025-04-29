@@ -1,15 +1,66 @@
 {
-  "apiVersion": "dashboard.grafana.app/v2alpha1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "v2-gcon-dash"
+    "name": "adsr42p",
+    "namespace": "default",
+    "creationTimestamp": "2025-04-29T08:08:40Z",
+    "labels": {},
+    "annotations": {}
   },
   "spec": {
-    "annotations": [],
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "builtIn": true,
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts"
+        }
+      }
+    ],
     "cursorSync": "Off",
     "description": "",
     "editable": true,
     "elements": {
+      "panel-1": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 1,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "#\n#\n# The pattern\n#### A common pattern to express significant parts of the dashboard schema\n",
+                "mode": "markdown"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
       "panel-2": {
         "kind": "Panel",
         "spec": {
@@ -25,7 +76,7 @@
           "id": 2,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -39,10 +90,10 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><h1>Schema validation</h1></center>",
-                "mode": "markdown"
+                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/pattern.png\" width=\"80%\"  /></center>",
+                "mode": "html"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -62,7 +113,7 @@
           "id": 3,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -76,10 +127,10 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/validation.gif\" />",
+                "content": "#\n#\n# Layout and panels\n#### Decoupling panel specification from layout models\n",
                 "mode": "markdown"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -99,7 +150,7 @@
           "id": 4,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -109,14 +160,14 @@
               },
               "options": {
                 "code": {
-                  "language": "plaintext",
-                  "showLineNumbers": false,
+                  "language": "json",
+                  "showLineNumbers": true,
                   "showMiniMap": false
                 },
-                "content": "<center><h1>Schema structure</h1></center>",
-                "mode": "html"
+                "content": "{\n  \"kind\": \"Dashboard\",\n  \"spec\": {\n    \"elements\": {\n      \"my-stat\": {\n        \"kind\": \"Panel\",\n        \"spec\": {\n          \"data\": {\n            \"kind\": \"QueryGroup\",\n            \"spec\": {\n              \"queries\": [\n                {\n                  \"kind\": \"PanelQuery\",\n                  \"spec\": {\n                    \"hidden\": false,\n                    \"query\": {\n                      \"kind\": \"grafana-testdata-datasource\",\n                      \"spec\": {}\n                    },\n                    \"refId\": \"A\"\n                  }\n                }\n              ],\n              \"queryOptions\": {},\n              \"transformations\": []\n            }\n          },\n          \"description\": \"\",\n          \"id\": 1,\n          \"links\": [],\n          \"title\": \"Simple timeseries\",\n          \"vizConfig\": {\n            \"kind\": \"timeseries\",\n            \"spec\": {\n              \"fieldConfig\": {\n                \"defaults\": {\n                  \"color\": {\n                    \"mode\": \"palette-classic\"\n                  },\n                  \"custom\": {\n                    \"axisBorderShow\": false,\n                    \"axisCenteredZero\": false,\n                    \"axisColorMode\": \"text\",\n                    \"axisLabel\": \"\",\n                    \"axisPlacement\": \"auto\",\n                    \"barAlignment\": 0,\n                    \"barWidthFactor\": 0.6,\n                    \"drawStyle\": \"line\",\n                    \"fillOpacity\": 0,\n                    \"gradientMode\": \"none\",\n                    \"hideFrom\": {\n                      \"legend\": false,\n                      \"tooltip\": false,\n                      \"viz\": false\n                    },\n                    \"insertNulls\": false,\n                    \"lineInterpolation\": \"linear\",\n                    \"lineWidth\": 1,\n                    \"pointSize\": 5,\n                    \"scaleDistribution\": {\n                      \"type\": \"linear\"\n                    },\n                    \"showPoints\": \"auto\",\n                    \"spanNulls\": false,\n                    \"stacking\": {\n                      \"group\": \"A\",\n                      \"mode\": \"none\"\n                    },\n                    \"thresholdsStyle\": {\n                      \"mode\": \"off\"\n                    }\n                  },\n                  \"thresholds\": {\n                    \"mode\": \"absolute\",\n                    \"steps\": [\n                      {\n                        \"color\": \"green\"\n                      },\n                      {\n                        \"color\": \"red\",\n                        \"value\": 80\n                      }\n                    ]\n                  }\n                },\n                \"overrides\": []\n              },\n              \"options\": {\n                \"legend\": {\n                  \"calcs\": [],\n                  \"displayMode\": \"list\",\n                  \"placement\": \"bottom\",\n                  \"showLegend\": true\n                },\n                \"tooltip\": {\n                  \"hideZeros\": false,\n                  \"mode\": \"single\",\n                  \"sort\": \"none\"\n                }\n              },\n              \"pluginVersion\": \"12.1.0-pre\"\n            }\n          }\n        }\n      },\n      \"panel-2\": {\n        \"kind\": \"Panel\",\n        \"spec\": {\n          \"data\": {\n            \"kind\": \"QueryGroup\",\n            \"spec\": {\n              \"queries\": [\n                {\n                  \"kind\": \"PanelQuery\",\n                  \"spec\": {\n                    \"hidden\": false,\n                    \"query\": {\n                      \"kind\": \"grafana-testdata-datasource\",\n                      \"spec\": {}\n                    },\n                    \"refId\": \"A\"\n                  }\n                }\n              ],\n              \"queryOptions\": {},\n              \"transformations\": []\n            }\n          },\n          \"description\": \"\",\n          \"id\": 2,\n          \"links\": [],\n          \"title\": \"Simple stat\",\n          \"vizConfig\": {\n            \"kind\": \"stat\",\n            \"spec\": {\n              \"fieldConfig\": {\n                \"defaults\": {\n                  \"color\": {\n                    \"mode\": \"thresholds\"\n                  },\n                  \"thresholds\": {\n                    \"mode\": \"absolute\",\n                    \"steps\": [\n                      {\n                        \"color\": \"green\"\n                      },\n                      {\n                        \"color\": \"red\",\n                        \"value\": 80\n                      }\n                    ]\n                  }\n                },\n                \"overrides\": []\n              },\n              \"options\": {\n                \"colorMode\": \"value\",\n                \"graphMode\": \"area\",\n                \"justifyMode\": \"auto\",\n                \"orientation\": \"auto\",\n                \"percentChangeColorMode\": \"standard\",\n                \"reduceOptions\": {\n                  \"calcs\": [\n                    \"lastNotNull\"\n                  ],\n                  \"fields\": \"\",\n                  \"values\": false\n                },\n                \"showPercentChange\": false,\n                \"textMode\": \"auto\",\n                \"wideLayout\": true\n              },\n              \"pluginVersion\": \"12.1.0-pre\"\n            }\n          }\n        }\n      }\n    },\n    \"layout\": {\n      \"kind\": \"AutoGridLayout\",\n      \"spec\": {\n        \"items\": [\n          {\n            \"kind\": \"AutoGridLayoutItem\",\n            \"spec\": {\n              \"element\": {\n                \"kind\": \"ElementReference\",\n                \"name\": \"my-stat\"\n              }\n            }\n          },\n        ],\n        \"columnWidthMode\": \"standard\",\n        \"maxColumnCount\": 3,\n        \"rowHeightMode\": \"standard\"\n      }\n    },\n    // ...\n  }\n}",
+                "mode": "code"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -136,7 +187,7 @@
           "id": 5,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -150,10 +201,10 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/schemacomplexity.png\" />",
+                "content": "\n    <img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/layoutpanels.png\" />\n",
                 "mode": "html"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -173,7 +224,7 @@
           "id": 6,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -187,10 +238,10 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><h1>Data source references</h1></center>",
-                "mode": "html"
+                "content": "#\n#\n# Panel structure\n#### An improved syntax to build panels\n\n",
+                "mode": "markdown"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -210,7 +261,44 @@
           "id": 7,
           "links": [],
           "title": "",
-          "transparent" : true,
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "json",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "{\n    \"kind\": \"Panel\",\n    \"spec\": {\n        \"title\": \"CPU Usage\",\n        \"description\": \"\",\n        \"links\": [],\n        \"data\": {\n            \"kind\": \"QueryGroup\",\n            \"spec\": {\n              \"queries\": [],\n              \"queryOptions\": {},\n              \"transformations\": []\n            }\n        },\n        \"vizConfig\": {\n            \"kind\": \"timeseries\",\n            \"spec\": {\n              \"fieldConfig\": {\n                \"defaults\": {},\n                \"overrides\": []\n              },\n              \"options\": {\n                \"legend\": {\n                  \"placement\": \"bottom\",\n                  \"showLegend\": true\n                },\n                \"tooltip\": {\n                  \"hideZeros\": false,\n                  \"mode\": \"single\",\n                  \"sort\": \"none\"\n                }\n            }            \n          }\n        }\n    }\n}\n",
+                "mode": "code"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-8": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 8,
+          "links": [],
+          "title": "",
+          "transparent": true,
           "vizConfig": {
             "kind": "text",
             "spec": {
@@ -224,10 +312,47 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\" />",
-                "mode": "markdown"
+                "content": "",
+                "mode": "html"
               },
-              "pluginVersion": "12.0.0-pre"
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-9": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 9,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<div style=\"display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n    <div><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/panel.png\" /></div>\n</div>",
+                "mode": "html"
+              },
+              "pluginVersion": "12.1.0-pre"
             }
           }
         }
@@ -247,7 +372,6 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": false,
                         "hideHeader": true,
                         "layout": {
                           "kind": "AutoGridLayout",
@@ -259,13 +383,13 @@
                                 "spec": {
                                   "element": {
                                     "kind": "ElementReference",
-                                    "name": "panel-2"
+                                    "name": "panel-1"
                                   }
                                 }
                               }
                             ],
-                            "maxColumnCount": 1,
-                            "rowHeight": 50,
+                            "maxColumnCount": 3,
+                            "rowHeight": 120,
                             "rowHeightMode": "custom"
                           }
                         },
@@ -275,7 +399,6 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": false,
                         "fillScreen": true,
                         "hideHeader": true,
                         "layout": {
@@ -289,7 +412,7 @@
                                 "spec": {
                                   "element": {
                                     "kind": "ElementReference",
-                                    "name": "panel-3"
+                                    "name": "panel-2"
                                   }
                                 }
                               }
@@ -304,7 +427,7 @@
                   ]
                 }
               },
-              "title": "😬 Schema validation"
+              "title": "Pattern"
             }
           },
           {
@@ -328,13 +451,13 @@
                                 "spec": {
                                   "element": {
                                     "kind": "ElementReference",
-                                    "name": "panel-4"
+                                    "name": "panel-3"
                                   }
                                 }
                               }
                             ],
                             "maxColumnCount": 3,
-                            "rowHeight": 50,
+                            "rowHeight": 120,
                             "rowHeightMode": "custom"
                           }
                         },
@@ -352,6 +475,15 @@
                             "columnWidthMode": "standard",
                             "fillScreen": true,
                             "items": [
+                              {
+                                "kind": "AutoGridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-4"
+                                  }
+                                }
+                              },
                               {
                                 "kind": "AutoGridLayoutItem",
                                 "spec": {
@@ -372,7 +504,7 @@
                   ]
                 }
               },
-              "title": "😬 Schema structure"
+              "title": "Layout and panels"
             }
           },
           {
@@ -385,6 +517,8 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
+                        "collapse": false,
+                        "fillScreen": false,
                         "hideHeader": true,
                         "layout": {
                           "kind": "AutoGridLayout",
@@ -402,11 +536,11 @@
                               }
                             ],
                             "maxColumnCount": 3,
-                            "rowHeight": 50,
+                            "rowHeight": 120,
                             "rowHeightMode": "custom"
                           }
                         },
-                        "title": "New row"
+                        "title": ""
                       }
                     },
                     {
@@ -415,23 +549,49 @@
                         "fillScreen": true,
                         "hideHeader": true,
                         "layout": {
-                          "kind": "AutoGridLayout",
+                          "kind": "GridLayout",
                           "spec": {
-                            "columnWidthMode": "standard",
-                            "fillScreen": true,
                             "items": [
                               {
-                                "kind": "AutoGridLayoutItem",
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-8"
+                                  },
+                                  "height": 1,
+                                  "width": 10,
+                                  "x": 0,
+                                  "y": 0
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
                                 "spec": {
                                   "element": {
                                     "kind": "ElementReference",
                                     "name": "panel-7"
-                                  }
+                                  },
+                                  "height": 17,
+                                  "width": 14,
+                                  "x": 10,
+                                  "y": 0
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-9"
+                                  },
+                                  "height": 12,
+                                  "width": 10,
+                                  "x": 0,
+                                  "y": 1
                                 }
                               }
-                            ],
-                            "maxColumnCount": 3,
-                            "rowHeightMode": "standard"
+                            ]
                           }
                         },
                         "title": "New row 1"
@@ -440,7 +600,51 @@
                   ]
                 }
               },
-              "title": "😬 Data source references"
+              "title": "Panel structure"
+            }
+          },
+          {
+            "kind": "TabsLayoutTab",
+            "spec": {
+              "layout": {
+                "kind": "RowsLayout",
+                "spec": {
+                  "rows": [
+                    {
+                      "kind": "RowsLayoutRow",
+                      "spec": {
+                        "layout": {
+                          "kind": "AutoGridLayout",
+                          "spec": {
+                            "columnWidthMode": "standard",
+                            "items": [],
+                            "maxColumnCount": 3,
+                            "rowHeightMode": "standard"
+                          }
+                        },
+                        "title": "DataQuery kind"
+                      }
+                    },
+                    {
+                      "kind": "RowsLayoutRow",
+                      "spec": {
+                        "collapse": false,
+                        "layout": {
+                          "kind": "AutoGridLayout",
+                          "spec": {
+                            "columnWidthMode": "standard",
+                            "items": [],
+                            "maxColumnCount": 3,
+                            "rowHeightMode": "standard"
+                          }
+                        },
+                        "title": "Portable dashboards"
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Queries"
             }
           }
         ]
@@ -470,7 +674,9 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "Gcon presentation test",
+    "title": "Dashboard schema v2",
     "variables": []
-  }
+  },
+  "status": {},
+  "apiVersion": "dashboard.grafana.app/v2alpha1"
 }
