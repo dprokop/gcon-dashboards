@@ -4,8 +4,6 @@
     "name": "adsr42p",
     "namespace": "default",
     "creationTimestamp": "2025-04-29T08:08:40Z",
-    "labels": {},
-    "annotations": {}
   },
   "spec": {
     "annotations": [
@@ -13,6 +11,10 @@
         "kind": "AnnotationQuery",
         "spec": {
           "builtIn": true,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
@@ -54,6 +56,154 @@
                   "showMiniMap": false
                 },
                 "content": "#\n#\n# The pattern\n#### A common pattern to express significant parts of the dashboard schema\n",
+                "mode": "markdown"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-10": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 10,
+          "links": [],
+          "title": "Query definition",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "json",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "{\n  \"kind\": \"DataQuery\",\n  \"group\": \"prometheus\",\n  \"version\": \"v0\",\n  \"datasource\": {\n    \"name\": \"axHb5\"\n  },\n  \"spec\": {\n    \"expr\": \"http_requests_total{job=\\\"apiserver\\\", handler=\\\"/api/comments\\\"}\"\n  }\n}\n",
+                "mode": "code"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-12": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 12,
+          "links": [],
+          "title": "Schema",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "typescript",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "export interface DataQueryKind {\n\tkind: \"DataQuery\";\n\tgroup: string;\n\tversion: string;\n\tdatasource?: {\n\t\tname?: string;\n\t\tlabels?: Record<string, string>;\n\t};\n\tspec: Record<string, any>;\n}",
+                "mode": "code"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-13": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 13,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\"/></center>",
+                "mode": "html"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-14": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 14,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "#\n#\n# Queries and portable dashboards\n#### A future-proof model for expressing queries and data source dependency\n\n",
                 "mode": "markdown"
               },
               "pluginVersion": "12.1.0-pre"
@@ -613,13 +763,61 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
+                        "hideHeader": true,
                         "layout": {
                           "kind": "AutoGridLayout",
                           "spec": {
                             "columnWidthMode": "standard",
-                            "items": [],
+                            "items": [
+                              {
+                                "kind": "AutoGridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-14"
+                                  }
+                                }
+                              }
+                            ],
                             "maxColumnCount": 3,
-                            "rowHeightMode": "standard"
+                            "rowHeight": 120,
+                            "rowHeightMode": "custom"
+                          }
+                        },
+                        "title": "New row"
+                      }
+                    },
+                    {
+                      "kind": "RowsLayoutRow",
+                      "spec": {
+                        "collapse": true,
+                        "layout": {
+                          "kind": "AutoGridLayout",
+                          "spec": {
+                            "columnWidthMode": "standard",
+                            "items": [
+                              {
+                                "kind": "AutoGridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-12"
+                                  }
+                                }
+                              },
+                              {
+                                "kind": "AutoGridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-10"
+                                  }
+                                }
+                              }
+                            ],
+                            "maxColumnCount": 3,
+                            "rowHeight": 260,
+                            "rowHeightMode": "custom"
                           }
                         },
                         "title": "DataQuery kind"
@@ -629,11 +827,24 @@
                       "kind": "RowsLayoutRow",
                       "spec": {
                         "collapse": false,
+                        "fillScreen": true,
+                        "hideHeader": false,
                         "layout": {
                           "kind": "AutoGridLayout",
                           "spec": {
                             "columnWidthMode": "standard",
-                            "items": [],
+                            "fillScreen": true,
+                            "items": [
+                              {
+                                "kind": "AutoGridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-13"
+                                  }
+                                }
+                              }
+                            ],
                             "maxColumnCount": 3,
                             "rowHeightMode": "standard"
                           }
@@ -644,7 +855,7 @@
                   ]
                 }
               },
-              "title": "Queries"
+              "title": "Queries and portable dashboards"
             }
           }
         ]
