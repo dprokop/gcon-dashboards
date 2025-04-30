@@ -75,7 +75,7 @@
             {
               "matcher": {
                 "id": "byName",
-                "options": "step-4"
+                "options": "step-ok"
               },
               "properties": [
                 {
@@ -96,7 +96,7 @@
                       "options": {
                         "match": "false",
                         "result": {
-                          "color": "super-light-blue",
+                          "color": "transparent",
                           "icon": "img/icons/unicons/ai.svg",
                           "index": 1
                         }
@@ -384,7 +384,7 @@
                   },
                   "size": 16,
                   "text": {
-                    "field": "value",
+                    "field": "step",
                     "fixed": "",
                     "mode": "field"
                   },
@@ -481,11 +481,32 @@
             "custom": {
               "align": "auto",
               "cellOptions": {
-                "type": "auto"
+                "type": "color-background"
               },
               "inspect": false
             },
-            "mappings": [],
+            "mappings": [
+              {
+                "options": {
+                  "match": "true",
+                  "result": {
+                    "color": "semi-dark-blue",
+                    "index": 0
+                  }
+                },
+                "type": "special"
+              },
+              {
+                "options": {
+                  "match": "false",
+                  "result": {
+                    "color": "transparent",
+                    "index": 1
+                  }
+                },
+                "type": "special"
+              }
+            ],
             "thresholds": {
               "mode": "absolute",
               "steps": [
@@ -499,20 +520,7 @@
               ]
             }
           },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "step"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 87
-                }
-              ]
-            }
-          ]
+          "overrides": []
         },
         "gridPos": {
           "h": 4,
@@ -543,6 +551,22 @@
           }
         ],
         "title": "step",
+        "transformations": [
+          {
+            "id": "filterFieldsByName",
+            "options": {
+              "include": {
+                "names": [
+                  "step-start",
+                  "step-api",
+                  "step-git",
+                  "step-db",
+                  "step-ok"
+                ]
+              }
+            }
+          }
+        ],
         "type": "table"
       }
     ],
