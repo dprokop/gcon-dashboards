@@ -5,6 +5,7 @@
     "name": "gitsync-diagrams"
   },
   "spec": {
+    "title": "GitSync Workflow",
     "annotations": [
       {
         "kind": "AnnotationQuery",
@@ -134,9 +135,7 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": [
-                    "sum"
-                  ],
+                  "reducer": ["sum"],
                   "show": false
                 },
                 "showHeader": true
@@ -1134,9 +1133,7 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": [
-                    "sum"
-                  ],
+                  "reducer": ["sum"],
                   "show": false
                 },
                 "showHeader": true
@@ -1272,7 +1269,6 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "GitSync Workflow",
     "variables": []
   }
 }

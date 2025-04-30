@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v1beta1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "daekdaagwg0cn4d"
+    "name": "gitsync-diagrams-tmp"
   },
   "spec": {
     "annotations": {
@@ -534,9 +534,7 @@
           "footer": {
             "countRows": false,
             "fields": "",
-            "reducer": [
-              "sum"
-            ],
+            "reducer": ["sum"],
             "show": false
           },
           "showHeader": true,
@@ -582,6 +580,6 @@
     },
     "timepicker": {},
     "timezone": "browser",
-    "title": "api-explain"
+    "title": "GitSync Workflow (works, original)"
   }
 }
