@@ -347,6 +347,42 @@
                     {
                       "background": {
                         "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "fill": {
+                          "field": "step-ok",
+                          "fixed": "#D9D9D9"
+                        },
+                        "path": {
+                          "fixed": "img/icons/unicons/check.svg",
+                          "mode": "fixed"
+                        }
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 7",
+                      "placement": {
+                        "height": 100,
+                        "left": 224,
+                        "rotation": 0,
+                        "top": 243,
+                        "width": 100
+                      },
+                      "type": "icon"
+                    },
+                    {
+                      "background": {
+                        "color": {
                           "fixed": "#D9D9D9"
                         }
                       },
