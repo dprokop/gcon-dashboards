@@ -262,7 +262,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": true,
+                "inlineEditing": false,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -720,7 +720,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": true,
+                "inlineEditing": false,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -1347,6 +1347,330 @@
             }
           }
         }
+      },
+      "panel-6": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "PD8C576611E62080A"
+                    },
+                    "hidden": false,
+                    "query": {
+                      "kind": "grafana-testdata-datasource",
+                      "spec": {}
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 6,
+          "links": [],
+          "title": "",
+          "vizConfig": {
+            "kind": "canvas",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green"
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "options": {
+                "infinitePan": false,
+                "inlineEditing": true,
+                "panZoom": false,
+                "root": {
+                  "background": {
+                    "color": {
+                      "fixed": "transparent"
+                    }
+                  },
+                  "border": {
+                    "color": {
+                      "fixed": "dark-green"
+                    }
+                  },
+                  "constraint": {
+                    "horizontal": "left",
+                    "vertical": "top"
+                  },
+                  "elements": [
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "fill": {
+                          "fixed": "#D9D9D9"
+                        },
+                        "path": {
+                          "fixed": "img/icons/unicons/github.svg",
+                          "mode": "fixed"
+                        }
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 1",
+                      "placement": {
+                        "height": 139,
+                        "left": 98,
+                        "top": 151,
+                        "width": 163
+                      },
+                      "type": "icon"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "DEV"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 447,
+                            "y": 76
+                          },
+                          "target": {
+                            "x": 0.8282208588957055,
+                            "y": 0.22302158273381295
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 287,
+                            "y": 160
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 2",
+                      "placement": {
+                        "height": 84,
+                        "left": 407,
+                        "top": 79,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Staging"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 447,
+                            "y": 203
+                          },
+                          "target": {
+                            "x": 0.8773006134969326,
+                            "y": -0.2517985611510791
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 291,
+                            "y": 193
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 3",
+                      "placement": {
+                        "height": 84,
+                        "left": 407,
+                        "top": 206,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Production"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 447,
+                            "y": 339
+                          },
+                          "target": {
+                            "x": 0.7423312883435583,
+                            "y": -0.6115107913669064
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 280,
+                            "y": 218
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 4",
+                      "placement": {
+                        "height": 84,
+                        "left": 407,
+                        "top": 342,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    }
+                  ],
+                  "name": "Element 1746013683609",
+                  "placement": {
+                    "height": 100,
+                    "left": 0,
+                    "rotation": 0,
+                    "top": 0,
+                    "width": 100
+                  },
+                  "type": "frame"
+                },
+                "showAdvancedTypes": true
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
       }
     },
     "layout": {
@@ -1435,12 +1759,23 @@
             "kind": "TabsLayoutTab",
             "spec": {
               "layout": {
-                "kind": "AutoGridLayout",
+                "kind": "GridLayout",
                 "spec": {
-                  "columnWidthMode": "standard",
-                  "items": [],
-                  "maxColumnCount": 3,
-                  "rowHeightMode": "standard"
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-6"
+                        },
+                        "height": 20,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
                 }
               },
               "title": "Deployment Models"
