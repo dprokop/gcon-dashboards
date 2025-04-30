@@ -17,7 +17,7 @@
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts"
+          "name": "Annotations \u0026 Alerts"
         }
       }
     ],
@@ -128,7 +128,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "export interface DataQueryKind {\n\tkind: \"DataQuery\";\n\tgroup: string;\n\tversion: string;\n\tdatasource?: {\n\t\tname?: string;\n\t\tlabels?: Record<string, string>;\n\t};\n\tspec: Record<string, any>;\n}",
+                "content": "export interface DataQueryKind {\n\tkind: \"DataQuery\";\n\tgroup: string;\n\tversion: string;\n\tdatasource?: {\n\t\tname?: string;\n\t\tlabels?: Record\u003cstring, string\u003e;\n\t};\n\tspec: Record\u003cstring, any\u003e;\n}",
                 "mode": "code"
               },
               "pluginVersion": "12.1.0-pre"
@@ -165,7 +165,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\"/></center>",
+                "content": "\u003ccenter\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\"/\u003e\u003c/center\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -239,7 +239,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/pattern.png\" width=\"80%\"  /></center>",
+                "content": "\u003ccenter\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/pattern.png\" width=\"80%\"  /\u003e\u003c/center\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -350,7 +350,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "\n    <img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/layoutpanels.png\" />\n",
+                "content": "\n    \u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/layoutpanels.png\" /\u003e\n",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -498,7 +498,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<div style=\"display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n    <div><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/panel.png\" /></div>\n</div>",
+                "content": "\u003cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center;\"\u003e\n    \u003cdiv\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/panel.png\" /\u003e\u003c/div\u003e\n\u003c/div\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -576,7 +576,7 @@
                   ]
                 }
               },
-              "title": "Pattern"
+              "title": "Save from UI"
             }
           },
           {
@@ -884,8 +884,7 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "Dashboard schema v2",
+    "title": "GitSync Workflow",
     "variables": []
-  },
-  "status": {}
+  }
 }
