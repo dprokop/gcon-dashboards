@@ -1,0 +1,563 @@
+{
+  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "daekdaagwg0cn4d"
+  },
+  "spec": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations \u0026 Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "datasource",
+          "uid": "-- Dashboard --"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [
+              {
+                "options": {
+                  "match": "true",
+                  "result": {
+                    "color": "semi-dark-blue",
+                    "index": 0
+                  }
+                },
+                "type": "special"
+              },
+              {
+                "options": {
+                  "match": "false",
+                  "result": {
+                    "color": "super-light-blue",
+                    "index": 1
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "step-4"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "match": "true",
+                        "result": {
+                          "color": "dark-green",
+                          "icon": "img/icons/unicons/check-circle.svg",
+                          "index": 0
+                        }
+                      },
+                      "type": "special"
+                    },
+                    {
+                      "options": {
+                        "match": "false",
+                        "result": {
+                          "color": "super-light-blue",
+                          "icon": "img/icons/unicons/ai.svg",
+                          "index": 1
+                        }
+                      },
+                      "type": "special"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 14,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 1,
+        "options": {
+          "infinitePan": false,
+          "inlineEditing": true,
+          "panZoom": false,
+          "root": {
+            "background": {
+              "color": {
+                "fixed": "transparent"
+              }
+            },
+            "border": {
+              "color": {
+                "fixed": "dark-green"
+              }
+            },
+            "constraint": {
+              "horizontal": "left",
+              "vertical": "top"
+            },
+            "elements": [
+              {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "fill": {
+                    "fixed": "#D9D9D9"
+                  },
+                  "path": {
+                    "fixed": "img/icons/unicons/user-circle.svg",
+                    "mode": "fixed"
+                  }
+                },
+                "connections": [
+                  {
+                    "color": {
+                      "field": "step-api",
+                      "fixed": "rgb(204, 204, 220)"
+                    },
+                    "path": "straight",
+                    "size": {
+                      "fixed": 2,
+                      "max": 10,
+                      "min": 1
+                    },
+                    "source": {
+                      "x": 1,
+                      "y": 0
+                    },
+                    "sourceOriginal": {
+                      "x": 198,
+                      "y": 233.5
+                    },
+                    "target": {
+                      "x": -1,
+                      "y": 0.006711409395973154
+                    },
+                    "targetName": "API",
+                    "targetOriginal": {
+                      "x": 365,
+                      "y": 233
+                    }
+                  }
+                ],
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "User",
+                "placement": {
+                  "height": 133,
+                  "left": 76,
+                  "top": 167,
+                  "width": 122
+                },
+                "type": "icon"
+              },
+              {
+                "background": {
+                  "color": {
+                    "fixed": "#D9D9D9"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "align": "center",
+                  "color": {
+                    "fixed": "#000000"
+                  },
+                  "size": 48,
+                  "text": {
+                    "fixed": "API"
+                  },
+                  "valign": "middle"
+                },
+                "connections": [
+                  {
+                    "color": {
+                      "field": "step-db",
+                      "fixed": "rgb(204, 204, 220)"
+                    },
+                    "path": "straight",
+                    "size": {
+                      "fixed": 2,
+                      "max": 10,
+                      "min": 1
+                    },
+                    "source": {
+                      "x": 1,
+                      "y": -0.5
+                    },
+                    "sourceOriginal": {
+                      "x": 506,
+                      "y": 270.75
+                    },
+                    "target": {
+                      "x": -0.7426900584795322,
+                      "y": -0.09219858156028368
+                    },
+                    "targetName": "Element 4",
+                    "targetOriginal": {
+                      "x": 677,
+                      "y": 385
+                    }
+                  },
+                  {
+                    "color": {
+                      "field": "step-git",
+                      "fixed": "rgb(204, 204, 220)"
+                    },
+                    "path": "straight",
+                    "size": {
+                      "fixed": 2,
+                      "max": 10,
+                      "min": 1
+                    },
+                    "source": {
+                      "x": 1,
+                      "y": 0.5
+                    },
+                    "sourceOriginal": {
+                      "x": 506,
+                      "y": 196.25
+                    },
+                    "target": {
+                      "x": -0.8641975308641975,
+                      "y": -0.22972972972972974
+                    },
+                    "targetName": "Element 3",
+                    "targetOriginal": {
+                      "x": 675,
+                      "y": 144
+                    }
+                  }
+                ],
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "API",
+                "placement": {
+                  "height": 149,
+                  "left": 365,
+                  "top": 159,
+                  "width": 141
+                },
+                "type": "rectangle"
+              },
+              {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "fill": {
+                    "fixed": "#D9D9D9"
+                  },
+                  "path": {
+                    "fixed": "img/icons/unicons/github.svg",
+                    "mode": "fixed"
+                  }
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "Element 3",
+                "placement": {
+                  "height": 148,
+                  "left": 664,
+                  "top": 53,
+                  "width": 162
+                },
+                "type": "icon"
+              },
+              {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "fill": {
+                    "fixed": "#D9D9D9"
+                  },
+                  "path": {
+                    "fixed": "img/icons/unicons/database.svg",
+                    "mode": "fixed"
+                  }
+                },
+                "connections": [],
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "Element 4",
+                "placement": {
+                  "height": 141,
+                  "left": 655,
+                  "top": 308,
+                  "width": 171
+                },
+                "type": "icon"
+              },
+              {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "align": "center",
+                  "color": {
+                    "fixed": "rgb(204, 204, 220)"
+                  },
+                  "size": 16,
+                  "text": {
+                    "field": "value",
+                    "fixed": "",
+                    "mode": "field"
+                  },
+                  "valign": "middle"
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "Element 6",
+                "placement": {
+                  "height": 39,
+                  "left": 12,
+                  "rotation": 0,
+                  "top": 2,
+                  "width": 47
+                },
+                "type": "text"
+              },
+              {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  }
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "config": {
+                  "fill": {
+                    "field": "step-ok",
+                    "fixed": "#D9D9D9"
+                  },
+                  "path": {
+                    "fixed": "img/icons/unicons/check.svg",
+                    "mode": "fixed"
+                  }
+                },
+                "constraint": {
+                  "horizontal": "left",
+                  "vertical": "top"
+                },
+                "links": [],
+                "name": "Element 7",
+                "placement": {
+                  "height": 100,
+                  "left": 224,
+                  "rotation": 0,
+                  "top": 243,
+                  "width": 100
+                },
+                "type": "icon"
+              }
+            ],
+            "name": "Element 1745924974298",
+            "placement": {
+              "height": 100,
+              "left": 0,
+              "rotation": 0,
+              "top": 0,
+              "width": 100
+            },
+            "type": "frame"
+          },
+          "showAdvancedTypes": false
+        },
+        "pluginVersion": "12.1.0-pre",
+        "targets": [
+          {
+            "datasource": {
+              "type": "datasource",
+              "uid": "-- Dashboard --"
+            },
+            "panelId": 2,
+            "refId": "A"
+          }
+        ],
+        "title": "New panel",
+        "type": "canvas"
+      },
+      {
+        "datasource": {
+          "type": "grafana-testdata-datasource",
+          "uid": "cejobd88i85j4d"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "auto",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "step"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 87
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 4,
+          "w": 24,
+          "x": 0,
+          "y": 14
+        },
+        "id": 2,
+        "options": {
+          "cellHeight": "sm",
+          "footer": {
+            "countRows": false,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "12.1.0-pre",
+        "targets": [
+          {
+            "csvContent": "start\napi\ngit\ndb\nok\n",
+            "refId": "A",
+            "scenarioId": "steps"
+          }
+        ],
+        "title": "step",
+        "type": "table"
+      }
+    ],
+    "preload": false,
+    "schemaVersion": 41,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "api-explain"
+  }
+}
