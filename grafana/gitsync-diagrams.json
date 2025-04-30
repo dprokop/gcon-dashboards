@@ -5,7 +5,6 @@
     "name": "gitsync-diagrams"
   },
   "spec": {
-    "title": "GitSync Workflow",
     "annotations": [
       {
         "kind": "AnnotationQuery",
@@ -135,7 +134,9 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": ["sum"],
+                  "reducer": [
+                    "sum"
+                  ],
                   "show": false
                 },
                 "showHeader": true
@@ -827,7 +828,6 @@
                       "connections": [
                         {
                           "color": {
-                            "field": "step-db",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -845,18 +845,17 @@
                             "y": 270.75
                           },
                           "target": {
-                            "x": -0.7426900584795322,
-                            "y": -0.09219858156028368
+                            "x": -0.7660818713450293,
+                            "y": -0.19148936170212766
                           },
                           "targetName": "Element 4",
                           "targetOriginal": {
-                            "x": 677,
-                            "y": 385
+                            "x": 675,
+                            "y": 392
                           }
                         },
                         {
                           "color": {
-                            "field": "step-git",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -867,20 +866,20 @@
                           },
                           "source": {
                             "x": 1,
-                            "y": 0.5
+                            "y": 0
                           },
                           "sourceOriginal": {
                             "x": 506,
-                            "y": 196.25
+                            "y": 233.5
                           },
                           "target": {
-                            "x": -0.8641975308641975,
-                            "y": -0.22972972972972974
+                            "x": -0.6140350877192983,
+                            "y": 0.2907801418439716
                           },
-                          "targetName": "Element 3",
+                          "targetName": "Element 4",
                           "targetOriginal": {
-                            "x": 675,
-                            "y": 144
+                            "x": 688,
+                            "y": 358
                           }
                         }
                       ],
@@ -918,6 +917,36 @@
                           "mode": "fixed"
                         }
                       },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 664,
+                            "y": 127
+                          },
+                          "target": {
+                            "x": 0.9858156028368794,
+                            "y": 0.2080536912751678
+                          },
+                          "targetName": "API",
+                          "targetOriginal": {
+                            "x": 505,
+                            "y": 218
+                          }
+                        }
+                      ],
                       "constraint": {
                         "horizontal": "left",
                         "vertical": "top"
@@ -1041,6 +1070,144 @@
                         "width": 100
                       },
                       "type": "icon"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "fill": {
+                          "fixed": "#D9D9D9"
+                        },
+                        "path": {
+                          "fixed": "img/icons/unicons/user-circle.svg",
+                          "mode": "fixed"
+                        }
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 970,
+                            "y": 127.5
+                          },
+                          "target": {
+                            "x": 0.9629629629629629,
+                            "y": 0
+                          },
+                          "targetName": "Element 3",
+                          "targetOriginal": {
+                            "x": 823,
+                            "y": 127
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 8",
+                      "placement": {
+                        "height": 133,
+                        "left": 970,
+                        "top": 61,
+                        "width": 122
+                      },
+                      "type": "icon"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "rgb(204, 204, 220)"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Write"
+                        },
+                        "valign": "middle"
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 9",
+                      "placement": {
+                        "height": 50,
+                        "left": 856,
+                        "rotation": 0,
+                        "top": 53,
+                        "width": 100
+                      },
+                      "type": "text"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "rgb(204, 204, 220)"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Read"
+                        },
+                        "valign": "middle"
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 10",
+                      "placement": {
+                        "height": 50,
+                        "left": 214,
+                        "rotation": 0,
+                        "top": 169,
+                        "width": 100
+                      },
+                      "type": "text"
                     }
                   ],
                   "name": "Element 1745924974298",
@@ -1169,7 +1336,9 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": ["sum"],
+                  "reducer": [
+                    "sum"
+                  ],
                   "show": false
                 },
                 "showHeader": true
@@ -1259,7 +1428,7 @@
                   ]
                 }
               },
-              "title": "Save from UI 1"
+              "title": "Write to git"
             }
           },
           {
@@ -1271,11 +1440,10 @@
                   "columnWidthMode": "standard",
                   "items": [],
                   "maxColumnCount": 3,
-                  "rowHeight": 120,
-                  "rowHeightMode": "custom"
+                  "rowHeightMode": "standard"
                 }
               },
-              "title": "Write to git"
+              "title": "Deployment Models"
             }
           }
         ]
@@ -1305,6 +1473,7 @@
       "timezone": "browser",
       "to": "now"
     },
+    "title": "GitSync Workflow",
     "variables": []
   }
 }
