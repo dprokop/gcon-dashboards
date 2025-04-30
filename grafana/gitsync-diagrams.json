@@ -24,7 +24,194 @@
     "cursorSync": "Off",
     "description": "",
     "editable": true,
-    "elements": {},
+    "elements": {
+      "panel-1": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "PD8C576611E62080A"
+                    },
+                    "hidden": false,
+                    "query": {
+                      "kind": "grafana-testdata-datasource",
+                      "spec": {
+                        "csvContent": "start\napi\ngit\ndb\nok",
+                        "scenarioId": "steps"
+                      }
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": [
+                {
+                  "kind": "filterFieldsByName",
+                  "spec": {
+                    "id": "filterFieldsByName",
+                    "options": {
+                      "include": {
+                        "names": [
+                          "step-start",
+                          "step-api",
+                          "step-git",
+                          "step-db",
+                          "step-ok"
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "description": "",
+          "id": 1,
+          "links": [],
+          "title": "",
+          "vizConfig": {
+            "kind": "table",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "color-background"
+                    },
+                    "inspect": false
+                  },
+                  "mappings": [
+                    {
+                      "options": {
+                        "match": "true",
+                        "result": {
+                          "color": "dark-blue",
+                          "index": 0
+                        }
+                      },
+                      "type": "special"
+                    },
+                    {
+                      "options": {
+                        "match": "false",
+                        "result": {
+                          "color": "transparent",
+                          "index": 1
+                        }
+                      },
+                      "type": "special"
+                    }
+                  ],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green"
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "options": {
+                "cellHeight": "sm",
+                "footer": {
+                  "countRows": false,
+                  "fields": "",
+                  "reducer": [
+                    "sum"
+                  ],
+                  "show": false
+                },
+                "showHeader": true
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "PD8C576611E62080A"
+                    },
+                    "hidden": false,
+                    "query": {
+                      "kind": "grafana-testdata-datasource",
+                      "spec": {}
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 2,
+          "links": [],
+          "title": "New panel",
+          "vizConfig": {
+            "kind": "canvas",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green"
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "options": {
+                "infinitePan": false,
+                "inlineEditing": true,
+                "panZoom": false,
+                "showAdvancedTypes": true
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      }
+    },
     "layout": {
       "kind": "TabsLayout",
       "spec": {
@@ -33,13 +220,36 @@
             "kind": "TabsLayoutTab",
             "spec": {
               "layout": {
-                "kind": "AutoGridLayout",
+                "kind": "GridLayout",
                 "spec": {
-                  "columnWidthMode": "standard",
-                  "fillScreen": true,
-                  "items": [],
-                  "maxColumnCount": 3,
-                  "rowHeightMode": "standard"
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-2"
+                        },
+                        "height": 12,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    },
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-1"
+                        },
+                        "height": 3,
+                        "width": 24,
+                        "x": 0,
+                        "y": 12
+                      }
+                    }
+                  ]
                 }
               },
               "title": "Save from UI"
