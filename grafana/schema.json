@@ -1,4 +1,5 @@
 {
+  "apiVersion": "dashboard.grafana.app/v2alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "dashboard-schema"
@@ -16,7 +17,7 @@
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts"
+          "name": "Annotations \u0026 Alerts"
         }
       }
     ],
@@ -127,7 +128,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "export interface DataQueryKind {\n\tkind: \"DataQuery\";\n\tgroup: string;\n\tversion: string;\n\tdatasource?: {\n\t\tname?: string;\n\t\tlabels?: Record<string, string>;\n\t};\n\tspec: Record<string, any>;\n}",
+                "content": "export interface DataQueryKind {\n\tkind: \"DataQuery\";\n\tgroup: string;\n\tversion: string;\n\tdatasource?: {\n\t\tname?: string;\n\t\tlabels?: Record\u003cstring, string\u003e;\n\t};\n\tspec: Record\u003cstring, any\u003e;\n}",
                 "mode": "code"
               },
               "pluginVersion": "12.1.0-pre"
@@ -164,7 +165,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\"/></center>",
+                "content": "\u003ccenter\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/diff.png\"/\u003e\u003c/center\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -238,7 +239,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\">graffanactl</h1></strong>\n<br />\n<h2>Command-line tool designed to simplify<br /> interaction with Grafana resources.</h2>",
+                "content": "\u003cbr /\u003e\u003cbr /\u003e\n\u003ch1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\"\u003egrafanactl\u003c/h1\u003e\u003c/strong\u003e\n\u003cbr /\u003e\n\u003ch2\u003eCommand-line tool designed to simplify\u003cbr /\u003e interaction with Grafana resources.\u003c/h2\u003e",
                 "mode": "markdown"
               },
               "pluginVersion": "12.1.0-pre"
@@ -275,7 +276,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/grafanactl.png\" />",
+                "content": "\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/grafanactl.png\" /\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -312,7 +313,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; \">Foundation SDK</h1></strong>\n<br />\n<h2>A library for building and manipulating Grafana objects programmatically.\n</h2>",
+                "content": "\u003cbr /\u003e\u003cbr /\u003e\n\u003ch1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; \"\u003eFoundation SDK\u003c/h1\u003e\u003c/strong\u003e\n\u003cbr /\u003e\n\u003ch2\u003eA library for building and manipulating Grafana objects programmatically.\n\u003c/h2\u003e",
                 "mode": "markdown"
               },
               "pluginVersion": "12.1.0-pre"
@@ -349,7 +350,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/foundation.png\" />",
+                "content": "\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/foundation.png\" /\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -386,7 +387,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<center><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/pattern.png\" width=\"80%\"  /></center>",
+                "content": "\u003ccenter\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/pattern.png\" width=\"80%\"  /\u003e\u003c/center\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -497,7 +498,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "\n    <img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/layoutpanels.png\" />\n",
+                "content": "\n    \u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/layoutpanels.png\" /\u003e\n",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -645,7 +646,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<div style=\"display: flex; flex-direction: column; align-items: center; justify-content: center;\">\n    <div><img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/panel.png\" /></div>\n</div>",
+                "content": "\u003cdiv style=\"display: flex; flex-direction: column; align-items: center; justify-content: center;\"\u003e\n    \u003cdiv\u003e\u003cimg src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/panel.png\" /\u003e\u003c/div\u003e\n\u003c/div\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
@@ -1124,7 +1125,5 @@
     },
     "title": "Dashboard schema v2",
     "variables": []
-  },
-  "status": {},
-  "apiVersion": "dashboard.grafana.app/v2alpha1"
+  }
 }
