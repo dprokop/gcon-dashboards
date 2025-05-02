@@ -1028,7 +1028,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": true,
+                        "collapse": false,
                         "layout": {
                           "kind": "AutoGridLayout",
                           "spec": {
@@ -1064,7 +1064,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": false,
+                        "collapse": true,
                         "fillScreen": true,
                         "hideHeader": false,
                         "layout": {
