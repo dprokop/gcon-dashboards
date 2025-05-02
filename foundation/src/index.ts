@@ -8,7 +8,7 @@ import { dashboardManifest } from './manifests';
 import { DashboardBuilder } from '@grafana/grafana-foundation-sdk/dashboard';
 
 const manifestsDir = './manifests';
-const dashboardFolderName = 'Part one';
+const dashboardFolderName = 'Foundation SDK dashboards';
 
 const deployDashboard = async (dashboard: DashboardBuilder): Promise<void> => {
     const grafana = Client.withConfigFromEnv(process.env);
