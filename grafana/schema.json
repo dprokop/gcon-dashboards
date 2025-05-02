@@ -209,6 +209,154 @@
           }
         }
       },
+      "panel-15": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 15,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\">grafanactl</h1></strong>\n<br />\n<h2>Command-line tool designed to simplify<br /> interaction with Grafana resources.</h2>",
+                "mode": "markdown"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-16": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 16,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/grafanactl.png\" />",
+                "mode": "html"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-17": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 17,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; \">Foundation SDK</h1></strong>\n<br />\n<h2>A library for building and manipulating Grafana objects programmatically.\n</h2>",
+                "mode": "markdown"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-18": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 18,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "<img src=\"https://raw.githubusercontent.com/dprokop/gcon-dashboards/refs/heads/main/images/foundation.png\" />",
+                "mode": "html"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
       "panel-2": {
         "kind": "Panel",
         "spec": {
@@ -510,6 +658,97 @@
       "kind": "TabsLayout",
       "spec": {
         "tabs": [
+          {
+            "kind": "TabsLayoutTab",
+            "spec": {
+              "layout": {
+                "kind": "TabsLayout",
+                "spec": {
+                  "tabs": [
+                    {
+                      "kind": "TabsLayoutTab",
+                      "spec": {
+                        "layout": {
+                          "kind": "GridLayout",
+                          "spec": {
+                            "items": [
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-15"
+                                  },
+                                  "height": 10,
+                                  "width": 8,
+                                  "x": 0,
+                                  "y": 0
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-16"
+                                  },
+                                  "height": 20,
+                                  "width": 16,
+                                  "x": 8,
+                                  "y": 0
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "title": "grafanactl"
+                      }
+                    },
+                    {
+                      "kind": "TabsLayoutTab",
+                      "spec": {
+                        "layout": {
+                          "kind": "GridLayout",
+                          "spec": {
+                            "items": [
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-17"
+                                  },
+                                  "height": 10,
+                                  "width": 8,
+                                  "x": 0,
+                                  "y": 0
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-18"
+                                  },
+                                  "height": 20,
+                                  "width": 16,
+                                  "x": 8,
+                                  "y": 0
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        "title": "Foundation SDK"
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "As code tools"
+            }
+          },
           {
             "kind": "TabsLayoutTab",
             "spec": {
@@ -883,7 +1122,7 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "Dashboard schema v2",
+    "title": "Dashboard schema v2 Copy",
     "variables": []
   },
   "status": {},
