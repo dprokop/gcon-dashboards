@@ -569,10 +569,10 @@
               "options": {
                 "code": {
                   "language": "json",
-                  "showLineNumbers": false,
+                  "showLineNumbers": true,
                   "showMiniMap": false
                 },
-                "content": "{\n    \"kind\": \"Panel\",\n    \"spec\": {\n        \"title\": \"CPU Usage\",\n        \"description\": \"\",\n        \"links\": [],\n        \"data\": {\n            \"kind\": \"QueryGroup\",\n            \"spec\": {\n              \"queries\": [],\n              \"queryOptions\": {},\n              \"transformations\": []\n            }\n        },\n        \"vizConfig\": {\n            \"kind\": \"timeseries\",\n            \"spec\": {\n              \"fieldConfig\": {\n                \"defaults\": {},\n                \"overrides\": []\n              },\n              \"options\": {\n                \"legend\": {\n                  \"placement\": \"bottom\",\n                  \"showLegend\": true\n                },\n                \"tooltip\": {\n                  \"hideZeros\": false,\n                  \"mode\": \"single\",\n                  \"sort\": \"none\"\n                }\n            }            \n          }\n        }\n    }\n}\n",
+                "content": "{\n  \"kind\": \"Panel\",\n  \"spec\": {\n    \"title\": \"CPU Usage\",\n    \"description\": \"\",\n    \"links\": [],\n    \"data\": {\n      \"kind\": \"QueryGroup\",\n      \"spec\": {\n        \"queries\": [],\n        \"queryOptions\": {},\n        \"transformations\": []\n      }\n    },\n    \"vizConfig\": {\n      \"kind\": \"timeseries\",\n      \"spec\": {\n        \"fieldConfig\": {\n          \"defaults\": {},\n          \"overrides\": []\n        },\n        \"options\": {\n          \"legend\": {\n            \"placement\": \"bottom\",\n            \"showLegend\": true\n          },\n          \"tooltip\": {\n            \"hideZeros\": false,\n            \"mode\": \"single\",\n            \"sort\": \"none\"\n          }\n        }\n      }\n    }\n  }\n}\n",
                 "mode": "code"
               },
               "pluginVersion": "12.1.0-pre"
