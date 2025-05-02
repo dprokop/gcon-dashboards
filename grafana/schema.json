@@ -239,7 +239,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "\u003cbr /\u003e\u003cbr /\u003e\n\u003ch1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\"\u003egraffanactl\u003c/h1\u003e\u003c/strong\u003e\n\u003cbr /\u003e\n\u003ch2\u003eCommand-line tool designed to simplify\u003cbr /\u003e interaction with Grafana resources.\u003c/h2\u003e",
+                "content": "\u003cbr /\u003e\u003cbr /\u003e\n\u003ch1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\"\u003egrafanactl\u003c/h1\u003e\u003c/strong\u003e\n\u003cbr /\u003e\n\u003ch2\u003eCommand-line tool designed to simplify\u003cbr /\u003e interaction with Grafana resources.\u003c/h2\u003e",
                 "mode": "markdown"
               },
               "pluginVersion": "12.1.0-pre"
