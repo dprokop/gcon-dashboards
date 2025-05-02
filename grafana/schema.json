@@ -238,7 +238,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\">grafanactl</h1></strong>\n<br />\n<h2>Command-line tool designed to simplify<br /> interaction with Grafana resources.</h2>",
+                "content": "<br /><br />\n<h1 style=\"color: #F9A01B!important; font-weight: bold; font-size: 3rem; font-family: monospace;\">graffanactl</h1></strong>\n<br />\n<h2>Command-line tool designed to simplify<br /> interaction with Grafana resources.</h2>",
                 "mode": "markdown"
               },
               "pluginVersion": "12.1.0-pre"
