@@ -51,6 +51,7 @@ const generateManifest = async (dashboard: DashboardBuilder): Promise<void> => {
 
     const dashboard = exampleDashboard();
 
+    
     if (deploy) {
         // Deploy the test dashboard directly to a Grafana instance.
         await deployDashboard(dashboard);
@@ -65,6 +66,5 @@ const generateManifest = async (dashboard: DashboardBuilder): Promise<void> => {
 
 	// By default: print the test dashboard to stdout.
     const manifest = dashboardManifest('', dashboard.build());
-    const manifestYaml = yaml.stringify(JSON.parse(JSON.stringify(manifest)));
-    console.log(manifestYaml);
+    console.log(JSON.stringify(manifest, null, 2));
 })();
