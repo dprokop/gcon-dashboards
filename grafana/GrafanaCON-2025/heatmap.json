@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v0alpha1",
+  "apiVersion": "dashboard.grafana.app/v1beta1",
   "kind": "Dashboard",
   "metadata": {
     "name": "aa1e9bfa"
@@ -53,6 +53,7 @@
           "y": 0
         },
         "id": 1,
+        "maxDataPoints": 100,
         "options": {
           "calculate": false,
           "cellGap": 1,
@@ -62,7 +63,7 @@
             "mode": "scheme",
             "reverse": false,
             "scale": "exponential",
-            "scheme": "Spectral",
+            "scheme": "Reds",
             "steps": 64
           },
           "exemplars": {
