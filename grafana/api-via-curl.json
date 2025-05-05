@@ -2,7 +2,7 @@
   "apiVersion": "dashboard.grafana.app/v1beta1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "deekgdf28pophca"
+    "name": "api-via-curl"
   },
   "spec": {
     "annotations": {
