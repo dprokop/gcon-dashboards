@@ -35,7 +35,10 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
-                    "datasource": { "type": "grafana-testdata-datasource" },
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "cejobd88i85j4d"
+                    },
                     "hidden": false,
                     "query": {
                       "kind": "grafana-testdata-datasource",
@@ -131,7 +134,9 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": ["sum"],
+                  "reducer": [
+                    "sum"
+                  ],
                   "show": false
                 },
                 "showHeader": true
@@ -152,15 +157,14 @@
                   "kind": "PanelQuery",
                   "spec": {
                     "datasource": {
-                      "type": "grafana-testdata-datasource",
-                      "uid": "cejobd88i85j4d"
+                      "type": "datasource",
+                      "uid": "-- Dashboard --"
                     },
                     "hidden": false,
                     "query": {
-                      "kind": "grafana-testdata-datasource",
+                      "kind": "datasource",
                       "spec": {
-                        "scenarioId": "random_walk",
-                        "seriesCount": 1
+                        "panelId": 1
                       }
                     },
                     "refId": "A"
@@ -1234,7 +1238,10 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
-                    "datasource": { "type": "grafana-testdata-datasource" },
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "cejobd88i85j4d"
+                    },
                     "hidden": false,
                     "query": {
                       "kind": "grafana-testdata-datasource",
@@ -1331,7 +1338,9 @@
                 "footer": {
                   "countRows": false,
                   "fields": "",
-                  "reducer": ["sum"],
+                  "reducer": [
+                    "sum"
+                  ],
                   "show": false
                 },
                 "showHeader": true
@@ -1351,7 +1360,10 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
-                    "datasource": { "type": "grafana-testdata-datasource" },
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "cejobd88i85j4d"
+                    },
                     "hidden": false,
                     "query": {
                       "kind": "grafana-testdata-datasource",
