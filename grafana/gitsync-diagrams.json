@@ -622,7 +622,7 @@
                     "query": {
                       "kind": "datasource",
                       "spec": {
-                        "panelId": 1
+                        "panelId": 5
                       }
                     },
                     "refId": "A"
@@ -671,8 +671,7 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
-                        "value": 0
+                        "color": "green"
                       },
                       {
                         "color": "red",
@@ -721,7 +720,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": false,
+                "inlineEditing": true,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -762,7 +761,7 @@
                       "connections": [
                         {
                           "color": {
-                            "field": "step-api",
+                            "field": "step-read",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -829,6 +828,7 @@
                       "connections": [
                         {
                           "color": {
+                            "field": "step-read-db",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -857,6 +857,7 @@
                         },
                         {
                           "color": {
+                            "field": "step-db",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -921,6 +922,7 @@
                       "connections": [
                         {
                           "color": {
+                            "field": "step-webhook",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -1095,6 +1097,7 @@
                       "connections": [
                         {
                           "color": {
+                            "field": "step-git",
                             "fixed": "rgb(204, 204, 220)"
                           },
                           "path": "straight",
@@ -1321,8 +1324,7 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
-                        "value": 0
+                        "color": "green"
                       },
                       {
                         "color": "red",
@@ -1393,8 +1395,7 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
-                        "value": 0
+                        "color": "green"
                       },
                       {
                         "color": "red",
@@ -1707,7 +1708,7 @@
                           "kind": "ElementReference",
                           "name": "panel-1"
                         },
-                        "height": 3,
+                        "height": 4,
                         "width": 24,
                         "x": 0,
                         "y": 17
