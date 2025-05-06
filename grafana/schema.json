@@ -719,7 +719,7 @@
                                     "kind": "ElementReference",
                                     "name": "panel-17"
                                   },
-                                  "height": 10,
+                                  "height": 17,
                                   "width": 8,
                                   "x": 0,
                                   "y": 0
@@ -1028,7 +1028,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": false,
+                        "collapse": true,
                         "layout": {
                           "kind": "AutoGridLayout",
                           "spec": {
@@ -1064,7 +1064,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": true,
+                        "collapse": false,
                         "fillScreen": true,
                         "hideHeader": false,
                         "layout": {
