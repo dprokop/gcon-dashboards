@@ -118,8 +118,7 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
-                        "value": 0
+                        "color": "green"
                       },
                       {
                         "color": "red",
@@ -214,8 +213,7 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green",
-                        "value": 0
+                        "color": "green"
                       },
                       {
                         "color": "red",
@@ -918,7 +916,36 @@
                           "mode": "fixed"
                         }
                       },
-                      "connections": [],
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "dark-blue"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -0.9999998351674021,
+                            "y": -2.0619985219594596e-7
+                          },
+                          "sourceOriginal": {
+                            "x": 664,
+                            "y": 127.00001525878906
+                          },
+                          "target": {
+                            "x": 0.9460990310560727,
+                            "y": 0.47382574913485737
+                          },
+                          "targetName": "API",
+                          "targetOriginal": {
+                            "x": 502.1999988555908,
+                            "y": 198.1999969482422
+                          }
+                        }
+                      ],
                       "constraint": {
                         "horizontal": "left",
                         "vertical": "top"
