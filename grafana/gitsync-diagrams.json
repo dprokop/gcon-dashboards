@@ -758,6 +758,7 @@
                       "placement": {
                         "height": 133,
                         "left": 76,
+                        "rotation": 0,
                         "top": 167,
                         "width": 122
                       },
@@ -956,45 +957,6 @@
                         "width": 171
                       },
                       "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 16,
-                        "text": {
-                          "field": "step",
-                          "fixed": "",
-                          "mode": "field"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 6",
-                      "placement": {
-                        "height": 39,
-                        "left": 12,
-                        "rotation": 0,
-                        "top": 2,
-                        "width": 47
-                      },
-                      "type": "text"
                     },
                     {
                       "background": {
@@ -1352,7 +1314,8 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green"
+                        "color": "green",
+                        "value": 0
                       },
                       {
                         "color": "red",
@@ -1678,7 +1641,8 @@
                     "mode": "absolute",
                     "steps": [
                       {
-                        "color": "green"
+                        "color": "green",
+                        "value": 0
                       },
                       {
                         "color": "red",
