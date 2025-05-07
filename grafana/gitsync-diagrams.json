@@ -262,7 +262,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": false,
+                "inlineEditing": true,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -546,45 +546,6 @@
                         "width": 171
                       },
                       "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 16,
-                        "text": {
-                          "field": "step",
-                          "fixed": "",
-                          "mode": "field"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Text",
-                      "placement": {
-                        "height": 39,
-                        "left": 12,
-                        "rotation": 0,
-                        "top": 2,
-                        "width": 47
-                      },
-                      "type": "text"
                     }
                   ],
                   "name": "Element 1745924974298",
