@@ -25,1325 +25,6 @@
     "description": "",
     "editable": true,
     "elements": {
-      "panel-1": {
-        "kind": "Panel",
-        "spec": {
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "datasource": {
-                      "type": "grafana-testdata-datasource",
-                      "uid": "cejobd88i85j4d"
-                    },
-                    "hidden": false,
-                    "query": {
-                      "kind": "grafana-testdata-datasource",
-                      "spec": {
-                        "csvContent": "start\napi\ngit\ndb\nok",
-                        "scenarioId": "steps"
-                      }
-                    },
-                    "refId": "A"
-                  }
-                }
-              ],
-              "queryOptions": {},
-              "transformations": [
-                {
-                  "kind": "filterFieldsByName",
-                  "spec": {
-                    "id": "filterFieldsByName",
-                    "options": {
-                      "include": {
-                        "names": [
-                          "step-start",
-                          "step-api",
-                          "step-git",
-                          "step-db",
-                          "step-ok"
-                        ]
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "description": "",
-          "id": 1,
-          "links": [],
-          "title": "Save from UI Steps",
-          "vizConfig": {
-            "kind": "table",
-            "spec": {
-              "fieldConfig": {
-                "defaults": {
-                  "color": {
-                    "mode": "thresholds"
-                  },
-                  "custom": {
-                    "align": "auto",
-                    "cellOptions": {
-                      "type": "color-background"
-                    },
-                    "inspect": false
-                  },
-                  "mappings": [
-                    {
-                      "options": {
-                        "match": "true",
-                        "result": {
-                          "color": "dark-blue",
-                          "index": 0
-                        }
-                      },
-                      "type": "special"
-                    },
-                    {
-                      "options": {
-                        "match": "false",
-                        "result": {
-                          "color": "transparent",
-                          "index": 1
-                        }
-                      },
-                      "type": "special"
-                    }
-                  ],
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "green"
-                      },
-                      {
-                        "color": "red",
-                        "value": 80
-                      }
-                    ]
-                  }
-                },
-                "overrides": []
-              },
-              "options": {
-                "cellHeight": "sm",
-                "footer": {
-                  "countRows": false,
-                  "fields": "",
-                  "reducer": ["sum"],
-                  "show": false
-                },
-                "showHeader": true
-              },
-              "pluginVersion": "12.1.0-pre"
-            }
-          }
-        }
-      },
-      "panel-3": {
-        "kind": "Panel",
-        "spec": {
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "datasource": {
-                      "type": "datasource",
-                      "uid": "-- Dashboard --"
-                    },
-                    "hidden": false,
-                    "query": {
-                      "kind": "datasource",
-                      "spec": {
-                        "panelId": 1
-                      }
-                    },
-                    "refId": "A"
-                  }
-                }
-              ],
-              "queryOptions": {},
-              "transformations": []
-            }
-          },
-          "description": "",
-          "id": 3,
-          "links": [],
-          "title": "",
-          "vizConfig": {
-            "kind": "canvas",
-            "spec": {
-              "fieldConfig": {
-                "defaults": {
-                  "color": {
-                    "mode": "thresholds"
-                  },
-                  "mappings": [
-                    {
-                      "options": {
-                        "match": "true",
-                        "result": {
-                          "color": "semi-dark-blue",
-                          "index": 0
-                        }
-                      },
-                      "type": "special"
-                    },
-                    {
-                      "options": {
-                        "match": "false",
-                        "result": {
-                          "color": "super-light-blue",
-                          "index": 1
-                        }
-                      },
-                      "type": "special"
-                    }
-                  ],
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "green"
-                      },
-                      {
-                        "color": "red",
-                        "value": 80
-                      }
-                    ]
-                  }
-                },
-                "overrides": [
-                  {
-                    "matcher": {
-                      "id": "byName",
-                      "options": "step-ok"
-                    },
-                    "properties": [
-                      {
-                        "id": "mappings",
-                        "value": [
-                          {
-                            "options": {
-                              "match": "true",
-                              "result": {
-                                "color": "dark-green",
-                                "icon": "img/icons/unicons/check-circle.svg",
-                                "index": 0
-                              }
-                            },
-                            "type": "special"
-                          },
-                          {
-                            "options": {
-                              "match": "false",
-                              "result": {
-                                "color": "transparent",
-                                "icon": "img/icons/unicons/ai.svg",
-                                "index": 1
-                              }
-                            },
-                            "type": "special"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              "options": {
-                "infinitePan": false,
-                "inlineEditing": false,
-                "panZoom": false,
-                "root": {
-                  "background": {
-                    "color": {
-                      "fixed": "transparent"
-                    }
-                  },
-                  "border": {
-                    "color": {
-                      "fixed": "dark-green"
-                    }
-                  },
-                  "constraint": {
-                    "horizontal": "left",
-                    "vertical": "top"
-                  },
-                  "elements": [
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/user-circle.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "field": "step-api",
-                            "fixed": "rgb(204, 204, 220)"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": 0
-                          },
-                          "sourceOriginal": {
-                            "x": 198,
-                            "y": 233.5
-                          },
-                          "target": {
-                            "x": -1,
-                            "y": 0.006711409395973154
-                          },
-                          "targetName": "API",
-                          "targetOriginal": {
-                            "x": 365,
-                            "y": 233
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "User",
-                      "placement": {
-                        "height": 133,
-                        "left": 76,
-                        "top": 167,
-                        "width": 122
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "field": "step-ok",
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/check.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 7",
-                      "placement": {
-                        "height": 100,
-                        "left": 224,
-                        "rotation": 0,
-                        "top": 243,
-                        "width": 100
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "#D9D9D9"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "#000000"
-                        },
-                        "size": 48,
-                        "text": {
-                          "fixed": "API"
-                        },
-                        "valign": "middle"
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "field": "step-db",
-                            "fixed": "rgb(204, 204, 220)"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": -0.5
-                          },
-                          "sourceOriginal": {
-                            "x": 506,
-                            "y": 270.75
-                          },
-                          "target": {
-                            "x": -0.7426900584795322,
-                            "y": -0.09219858156028368
-                          },
-                          "targetName": "DB",
-                          "targetOriginal": {
-                            "x": 677,
-                            "y": 385
-                          }
-                        },
-                        {
-                          "color": {
-                            "field": "step-git",
-                            "fixed": "rgb(204, 204, 220)"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": 0.5
-                          },
-                          "sourceOriginal": {
-                            "x": 506,
-                            "y": 196.25
-                          },
-                          "target": {
-                            "x": -0.8641975308641975,
-                            "y": -0.22972972972972974
-                          },
-                          "targetName": "GIT",
-                          "targetOriginal": {
-                            "x": 675,
-                            "y": 144
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "API",
-                      "placement": {
-                        "height": 149,
-                        "left": 365,
-                        "top": 159,
-                        "width": 141
-                      },
-                      "type": "rectangle"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/github.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "GIT",
-                      "placement": {
-                        "height": 148,
-                        "left": 664,
-                        "rotation": 0,
-                        "top": 53,
-                        "width": 162
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/database.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "DB",
-                      "placement": {
-                        "height": 141,
-                        "left": 655,
-                        "top": 308,
-                        "width": 171
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 16,
-                        "text": {
-                          "field": "step",
-                          "fixed": "",
-                          "mode": "field"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Text",
-                      "placement": {
-                        "height": 39,
-                        "left": 12,
-                        "rotation": 0,
-                        "top": 2,
-                        "width": 47
-                      },
-                      "type": "text"
-                    }
-                  ],
-                  "name": "Element 1745924974298",
-                  "placement": {
-                    "height": 100,
-                    "left": 0,
-                    "rotation": 0,
-                    "top": 0,
-                    "width": 100
-                  },
-                  "type": "frame"
-                },
-                "showAdvancedTypes": false
-              },
-              "pluginVersion": "12.1.0-pre"
-            }
-          }
-        }
-      },
-      "panel-4": {
-        "kind": "Panel",
-        "spec": {
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "datasource": {
-                      "type": "datasource",
-                      "uid": "-- Dashboard --"
-                    },
-                    "hidden": false,
-                    "query": {
-                      "kind": "datasource",
-                      "spec": {
-                        "panelId": 5
-                      }
-                    },
-                    "refId": "A"
-                  }
-                }
-              ],
-              "queryOptions": {},
-              "transformations": []
-            }
-          },
-          "description": "",
-          "id": 4,
-          "links": [],
-          "title": "",
-          "vizConfig": {
-            "kind": "canvas",
-            "spec": {
-              "fieldConfig": {
-                "defaults": {
-                  "color": {
-                    "mode": "thresholds"
-                  },
-                  "mappings": [
-                    {
-                      "options": {
-                        "match": "true",
-                        "result": {
-                          "color": "semi-dark-blue",
-                          "index": 0
-                        }
-                      },
-                      "type": "special"
-                    },
-                    {
-                      "options": {
-                        "match": "false",
-                        "result": {
-                          "color": "super-light-blue",
-                          "index": 1
-                        }
-                      },
-                      "type": "special"
-                    }
-                  ],
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "green"
-                      },
-                      {
-                        "color": "red",
-                        "value": 80
-                      }
-                    ]
-                  }
-                },
-                "overrides": [
-                  {
-                    "matcher": {
-                      "id": "byName",
-                      "options": "step-ok"
-                    },
-                    "properties": [
-                      {
-                        "id": "mappings",
-                        "value": [
-                          {
-                            "options": {
-                              "match": "true",
-                              "result": {
-                                "color": "dark-green",
-                                "icon": "img/icons/unicons/check-circle.svg",
-                                "index": 0
-                              }
-                            },
-                            "type": "special"
-                          },
-                          {
-                            "options": {
-                              "match": "false",
-                              "result": {
-                                "color": "transparent",
-                                "icon": "img/icons/unicons/ai.svg",
-                                "index": 1
-                              }
-                            },
-                            "type": "special"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              "options": {
-                "infinitePan": false,
-                "inlineEditing": true,
-                "panZoom": false,
-                "root": {
-                  "background": {
-                    "color": {
-                      "fixed": "transparent"
-                    }
-                  },
-                  "border": {
-                    "color": {
-                      "fixed": "dark-green"
-                    }
-                  },
-                  "constraint": {
-                    "horizontal": "left",
-                    "vertical": "top"
-                  },
-                  "elements": [
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/user-circle.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "fixed": "dark-purple"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": 0
-                          },
-                          "sourceOriginal": {
-                            "x": 198,
-                            "y": 233.5
-                          },
-                          "target": {
-                            "x": -1,
-                            "y": 0.006711409395973154
-                          },
-                          "targetName": "API",
-                          "targetOriginal": {
-                            "x": 365,
-                            "y": 233
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "User",
-                      "placement": {
-                        "height": 133,
-                        "left": 76,
-                        "top": 167,
-                        "width": 122
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "#D9D9D9"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "#000000"
-                        },
-                        "size": 48,
-                        "text": {
-                          "fixed": "API"
-                        },
-                        "valign": "middle"
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "fixed": "dark-purple"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": -0.5
-                          },
-                          "sourceOriginal": {
-                            "x": 506,
-                            "y": 270.75
-                          },
-                          "target": {
-                            "x": -0.7660818713450293,
-                            "y": -0.19148936170212766
-                          },
-                          "targetName": "Element 4",
-                          "targetOriginal": {
-                            "x": 675,
-                            "y": 392
-                          }
-                        },
-                        {
-                          "color": {
-                            "fixed": "dark-blue"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": 1,
-                            "y": 0
-                          },
-                          "sourceOriginal": {
-                            "x": 506,
-                            "y": 233.5
-                          },
-                          "target": {
-                            "x": -0.6140350877192983,
-                            "y": 0.2907801418439716
-                          },
-                          "targetName": "Element 4",
-                          "targetOriginal": {
-                            "x": 688,
-                            "y": 358
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "API",
-                      "placement": {
-                        "height": 149,
-                        "left": 365,
-                        "top": 159,
-                        "width": 141
-                      },
-                      "type": "rectangle"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/github.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "fixed": "dark-blue"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": -0.9999998351674021,
-                            "y": -2.0619985219594596e-7
-                          },
-                          "sourceOriginal": {
-                            "x": 664,
-                            "y": 127.00001525878906
-                          },
-                          "target": {
-                            "x": 0.9460990310560727,
-                            "y": 0.47382574913485737
-                          },
-                          "targetName": "API",
-                          "targetOriginal": {
-                            "x": 502.1999988555908,
-                            "y": 198.1999969482422
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 3",
-                      "placement": {
-                        "height": 148,
-                        "left": 664,
-                        "rotation": 0,
-                        "top": 53,
-                        "width": 162
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/database.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 4",
-                      "placement": {
-                        "height": 141,
-                        "left": 655,
-                        "top": 308,
-                        "width": 171
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 16,
-                        "text": {
-                          "field": "step",
-                          "fixed": "",
-                          "mode": "field"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 6",
-                      "placement": {
-                        "height": 39,
-                        "left": 12,
-                        "rotation": 0,
-                        "top": 2,
-                        "width": 47
-                      },
-                      "type": "text"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "field": "step-ok",
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/check.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 7",
-                      "placement": {
-                        "height": 100,
-                        "left": 224,
-                        "rotation": 0,
-                        "top": 243,
-                        "width": 100
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "fill": {
-                          "fixed": "#D9D9D9"
-                        },
-                        "path": {
-                          "fixed": "img/icons/unicons/user-circle.svg",
-                          "mode": "fixed"
-                        }
-                      },
-                      "connections": [
-                        {
-                          "color": {
-                            "fixed": "dark-blue"
-                          },
-                          "path": "straight",
-                          "size": {
-                            "fixed": 2,
-                            "max": 10,
-                            "min": 1
-                          },
-                          "source": {
-                            "x": -1,
-                            "y": 0
-                          },
-                          "sourceOriginal": {
-                            "x": 970,
-                            "y": 127.5
-                          },
-                          "target": {
-                            "x": 0.9629629629629629,
-                            "y": 0
-                          },
-                          "targetName": "Element 3",
-                          "targetOriginal": {
-                            "x": 823,
-                            "y": 127
-                          }
-                        }
-                      ],
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 8",
-                      "placement": {
-                        "height": 133,
-                        "left": 970,
-                        "top": 61,
-                        "width": 122
-                      },
-                      "type": "icon"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 36,
-                        "text": {
-                          "fixed": "Write"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 9",
-                      "placement": {
-                        "height": 50,
-                        "left": 856,
-                        "rotation": 0,
-                        "top": 53,
-                        "width": 100
-                      },
-                      "type": "text"
-                    },
-                    {
-                      "background": {
-                        "color": {
-                          "fixed": "transparent"
-                        }
-                      },
-                      "border": {
-                        "color": {
-                          "fixed": "dark-green"
-                        }
-                      },
-                      "config": {
-                        "align": "center",
-                        "color": {
-                          "fixed": "rgb(204, 204, 220)"
-                        },
-                        "size": 36,
-                        "text": {
-                          "fixed": "Read"
-                        },
-                        "valign": "middle"
-                      },
-                      "constraint": {
-                        "horizontal": "left",
-                        "vertical": "top"
-                      },
-                      "links": [],
-                      "name": "Element 10",
-                      "placement": {
-                        "height": 50,
-                        "left": 214,
-                        "rotation": 0,
-                        "top": 169,
-                        "width": 100
-                      },
-                      "type": "text"
-                    }
-                  ],
-                  "name": "Element 1745924974298",
-                  "placement": {
-                    "height": 100,
-                    "left": 0,
-                    "rotation": 0,
-                    "top": 0,
-                    "width": 100
-                  },
-                  "type": "frame"
-                },
-                "showAdvancedTypes": false
-              },
-              "pluginVersion": "12.1.0-pre"
-            }
-          }
-        }
-      },
-      "panel-5": {
-        "kind": "Panel",
-        "spec": {
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "datasource": {
-                      "type": "grafana-testdata-datasource",
-                      "uid": "cejobd88i85j4d"
-                    },
-                    "hidden": false,
-                    "query": {
-                      "kind": "grafana-testdata-datasource",
-                      "spec": {
-                        "csvContent": "start\ngit\nwebhook\ndb\nread\nread-db\nok",
-                        "scenarioId": "steps"
-                      }
-                    },
-                    "refId": "A"
-                  }
-                }
-              ],
-              "queryOptions": {},
-              "transformations": [
-                {
-                  "kind": "filterFieldsByName",
-                  "spec": {
-                    "id": "filterFieldsByName",
-                    "options": {
-                      "include": {
-                        "names": [
-                          "step-start",
-                          "step-api",
-                          "step-git",
-                          "step-db",
-                          "step-ok"
-                        ]
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "description": "",
-          "id": 5,
-          "links": [],
-          "title": "Write to git steps",
-          "vizConfig": {
-            "kind": "table",
-            "spec": {
-              "fieldConfig": {
-                "defaults": {
-                  "color": {
-                    "mode": "thresholds"
-                  },
-                  "custom": {
-                    "align": "auto",
-                    "cellOptions": {
-                      "type": "color-background"
-                    },
-                    "inspect": false
-                  },
-                  "mappings": [
-                    {
-                      "options": {
-                        "match": "true",
-                        "result": {
-                          "color": "dark-blue",
-                          "index": 0
-                        }
-                      },
-                      "type": "special"
-                    },
-                    {
-                      "options": {
-                        "match": "false",
-                        "result": {
-                          "color": "transparent",
-                          "index": 1
-                        }
-                      },
-                      "type": "special"
-                    }
-                  ],
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "green"
-                      },
-                      {
-                        "color": "red",
-                        "value": 80
-                      }
-                    ]
-                  }
-                },
-                "overrides": []
-              },
-              "options": {
-                "cellHeight": "sm",
-                "footer": {
-                  "countRows": false,
-                  "fields": "",
-                  "reducer": ["sum"],
-                  "show": false
-                },
-                "showHeader": true
-              },
-              "pluginVersion": "12.1.0-pre"
-            }
-          }
-        }
-      },
       "panel-6": {
         "kind": "Panel",
         "spec": {
@@ -2063,90 +744,341 @@
             }
           }
         }
+      },
+      "panel-8": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "datasource": {
+                      "type": "grafana-testdata-datasource",
+                      "uid": "cejobd88i85j4d"
+                    },
+                    "hidden": false,
+                    "query": {
+                      "kind": "grafana-testdata-datasource",
+                      "spec": {}
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 8,
+          "links": [],
+          "title": "",
+          "vizConfig": {
+            "kind": "canvas",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green"
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "options": {
+                "infinitePan": false,
+                "inlineEditing": true,
+                "panZoom": false,
+                "root": {
+                  "background": {
+                    "color": {
+                      "fixed": "transparent"
+                    }
+                  },
+                  "border": {
+                    "color": {
+                      "fixed": "dark-green"
+                    }
+                  },
+                  "constraint": {
+                    "horizontal": "left",
+                    "vertical": "top"
+                  },
+                  "elements": [
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "transparent"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "fill": {
+                          "fixed": "#D9D9D9"
+                        },
+                        "path": {
+                          "fixed": "img/icons/unicons/github.svg",
+                          "mode": "fixed"
+                        }
+                      },
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 1",
+                      "placement": {
+                        "height": 139,
+                        "left": 98,
+                        "top": 151,
+                        "width": 163
+                      },
+                      "type": "icon"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Team A"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -1,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 447,
+                            "y": 76
+                          },
+                          "target": {
+                            "x": 0.8282208588957055,
+                            "y": 0.22302158273381295
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 287,
+                            "y": 160
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 2",
+                      "placement": {
+                        "height": 83.9914779663086,
+                        "left": 407,
+                        "rotation": 0,
+                        "top": 79,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Team B"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "direction": "reverse",
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -0.999999912449571,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 407.0000305175781,
+                            "y": 248
+                          },
+                          "target": {
+                            "x": 0.8920245024324195,
+                            "y": -0.3294963150573291
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 252.19999885559082,
+                            "y": 243.39999389648438
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 3",
+                      "placement": {
+                        "height": 84,
+                        "left": 407,
+                        "rotation": 0,
+                        "top": 206,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    },
+                    {
+                      "background": {
+                        "color": {
+                          "fixed": "#D9D9D9"
+                        }
+                      },
+                      "border": {
+                        "color": {
+                          "fixed": "dark-green"
+                        }
+                      },
+                      "config": {
+                        "align": "center",
+                        "color": {
+                          "fixed": "#000000"
+                        },
+                        "size": 36,
+                        "text": {
+                          "fixed": "Team C"
+                        },
+                        "valign": "middle"
+                      },
+                      "connections": [
+                        {
+                          "color": {
+                            "fixed": "rgb(204, 204, 220)"
+                          },
+                          "direction": "reverse",
+                          "path": "straight",
+                          "size": {
+                            "fixed": 2,
+                            "max": 10,
+                            "min": 1
+                          },
+                          "source": {
+                            "x": -0.999999912449571,
+                            "y": 0
+                          },
+                          "sourceOriginal": {
+                            "x": 407.0000305175781,
+                            "y": 384.0000305175781
+                          },
+                          "target": {
+                            "x": 0.7325152999784318,
+                            "y": -0.7323740128990558
+                          },
+                          "targetName": "Element 1",
+                          "targetOriginal": {
+                            "x": 239.19999885559082,
+                            "y": 271.3999938964844
+                          }
+                        }
+                      ],
+                      "constraint": {
+                        "horizontal": "left",
+                        "vertical": "top"
+                      },
+                      "links": [],
+                      "name": "Element 4",
+                      "placement": {
+                        "height": 84,
+                        "left": 407,
+                        "rotation": 0,
+                        "top": 342,
+                        "width": 305
+                      },
+                      "type": "rectangle"
+                    }
+                  ],
+                  "name": "Element 1746013683609",
+                  "placement": {
+                    "height": 100,
+                    "left": 0,
+                    "rotation": 0,
+                    "top": 0,
+                    "width": 100
+                  },
+                  "type": "frame"
+                },
+                "showAdvancedTypes": true
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
       }
     },
     "layout": {
       "kind": "TabsLayout",
       "spec": {
         "tabs": [
-          {
-            "kind": "TabsLayoutTab",
-            "spec": {
-              "layout": {
-                "kind": "GridLayout",
-                "spec": {
-                  "items": [
-                    {
-                      "kind": "GridLayoutItem",
-                      "spec": {
-                        "element": {
-                          "kind": "ElementReference",
-                          "name": "panel-3"
-                        },
-                        "height": 17,
-                        "width": 24,
-                        "x": 0,
-                        "y": 0
-                      }
-                    },
-                    {
-                      "kind": "GridLayoutItem",
-                      "spec": {
-                        "element": {
-                          "kind": "ElementReference",
-                          "name": "panel-1"
-                        },
-                        "height": 4,
-                        "width": 24,
-                        "x": 0,
-                        "y": 17
-                      }
-                    }
-                  ]
-                }
-              },
-              "title": "Save from UI"
-            }
-          },
-          {
-            "kind": "TabsLayoutTab",
-            "spec": {
-              "layout": {
-                "kind": "GridLayout",
-                "spec": {
-                  "items": [
-                    {
-                      "kind": "GridLayoutItem",
-                      "spec": {
-                        "element": {
-                          "kind": "ElementReference",
-                          "name": "panel-4"
-                        },
-                        "height": 17,
-                        "width": 24,
-                        "x": 0,
-                        "y": 0
-                      }
-                    },
-                    {
-                      "kind": "GridLayoutItem",
-                      "spec": {
-                        "element": {
-                          "kind": "ElementReference",
-                          "name": "panel-5"
-                        },
-                        "height": 3,
-                        "width": 24,
-                        "x": 0,
-                        "y": 17
-                      }
-                    }
-                  ]
-                }
-              },
-              "title": "Write to git"
-            }
-          },
           {
             "kind": "TabsLayoutTab",
             "spec": {
@@ -2170,7 +1102,33 @@
                   ]
                 }
               },
-              "title": "Deployment Models"
+              "title": "Environments"
+            }
+          },
+          {
+            "kind": "TabsLayoutTab",
+            "spec": {
+              "layout": {
+                "kind": "GridLayout",
+                "spec": {
+                  "items": [
+                    {
+                      "kind": "GridLayoutItem",
+                      "spec": {
+                        "element": {
+                          "kind": "ElementReference",
+                          "name": "panel-8"
+                        },
+                        "height": 20,
+                        "width": 24,
+                        "x": 0,
+                        "y": 0
+                      }
+                    }
+                  ]
+                }
+              },
+              "title": "Mulitple repos"
             }
           },
           {
@@ -2196,7 +1154,7 @@
                   ]
                 }
               },
-              "title": "Deployment Models (alt)"
+              "title": "Edge"
             }
           }
         ]
@@ -2226,7 +1184,7 @@
       "timezone": "browser",
       "to": "now"
     },
-    "title": "GitSync Workflow",
+    "title": "Deployment models",
     "variables": []
   }
 }
