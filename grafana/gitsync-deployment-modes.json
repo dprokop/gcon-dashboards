@@ -81,7 +81,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": true,
+                "inlineEditing": false,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -407,7 +407,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": true,
+                "inlineEditing": false,
                 "panZoom": false,
                 "root": {
                   "background": {
@@ -805,7 +805,7 @@
               },
               "options": {
                 "infinitePan": false,
-                "inlineEditing": true,
+                "inlineEditing": false,
                 "panZoom": false,
                 "root": {
                   "background": {
