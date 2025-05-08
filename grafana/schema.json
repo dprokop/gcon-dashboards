@@ -1241,7 +1241,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": true,
+                        "collapse": false,
                         "hideHeader": true,
                         "layout": {
                           "kind": "AutoGridLayout",
@@ -1269,7 +1269,7 @@
                     {
                       "kind": "RowsLayoutRow",
                       "spec": {
-                        "collapse": true,
+                        "collapse": false,
                         "fillScreen": true,
                         "hideHeader": true,
                         "layout": {
@@ -1596,7 +1596,7 @@
                               {
                                 "kind": "RowsLayoutRow",
                                 "spec": {
-                                  "collapse": true,
+                                  "collapse": false,
                                   "hideHeader": true,
                                   "layout": {
                                     "kind": "AutoGridLayout",
@@ -1624,7 +1624,7 @@
                               {
                                 "kind": "RowsLayoutRow",
                                 "spec": {
-                                  "collapse": true,
+                                  "collapse": false,
                                   "fillScreen": true,
                                   "hideHeader": true,
                                   "layout": {
