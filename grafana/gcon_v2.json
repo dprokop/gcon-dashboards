@@ -683,8 +683,8 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "# Unified structure",
-                "mode": "markdown"
+                "content": "\u003cdiv style=\"display: flex; flex-grow:1; align-items: center; justify-content: center; height: 200px; 100%; background: #59160B; border-radius: 10px\"\u003e\n  \u003ch2\u003eUnified structure\u003c/h2\u003e\n  \u003c/div\u003e",
+                "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
             }
@@ -720,8 +720,8 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "# Untagled complexity",
-                "mode": "markdown"
+                "content": "\u003cdiv style=\"display: flex; flex-grow:1; align-items: center; justify-content: center; height: 200px; 100%; background: #59160B; border-radius: 10px\"\u003e\n  \u003ch2\u003eUntagled complexity\u003c/h2\u003e\n  \u003c/div\u003e",
+                "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
             }
@@ -757,8 +757,8 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "# Multiple layouts support",
-                "mode": "markdown"
+                "content": "\u003cdiv style=\"display: flex; flex-grow:1; align-items: center; justify-content: center; height: 200px; 100%; background: #59160B; border-radius: 10px\"\u003e\n  \u003ch2\u003eMulitple layout support\u003c/h2\u003e\n  \u003c/div\u003e",
+                "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
             }
@@ -794,8 +794,45 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "# Portable dashboards",
-                "mode": "markdown"
+                "content": "\u003cdiv style=\"display: flex; flex-grow:1; align-items: center; justify-content: center; height: 200px; 100%; background: #59160B; border-radius: 10px\"\u003e\n  \u003ch2\u003ePortable dashboard\u003c/h2\u003e\n  \u003c/div\u003e",
+                "mode": "html"
+              },
+              "pluginVersion": "12.1.0-pre"
+            }
+          }
+        }
+      },
+      "panel-36": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 36,
+          "links": [],
+          "title": "",
+          "transparent": true,
+          "vizConfig": {
+            "kind": "text",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
+              "options": {
+                "code": {
+                  "language": "plaintext",
+                  "showLineNumbers": false,
+                  "showMiniMap": false
+                },
+                "content": "\u003ccenter\u003e\u003ca href=\"https://github.com/dprokop/gcon-dashboards/tree/main/grafana\" target=\"_blank\"\u003eApp platform resource exampls\u003c/a\u003e\u003ccenter\u003e",
+                "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
             }
@@ -1310,6 +1347,19 @@
                                   "width": 9,
                                   "x": 12,
                                   "y": 7
+                                }
+                              },
+                              {
+                                "kind": "GridLayoutItem",
+                                "spec": {
+                                  "element": {
+                                    "kind": "ElementReference",
+                                    "name": "panel-36"
+                                  },
+                                  "height": 2,
+                                  "width": 18,
+                                  "x": 3,
+                                  "y": 14
                                 }
                               }
                             ]
