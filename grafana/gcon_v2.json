@@ -831,7 +831,7 @@
                   "showLineNumbers": false,
                   "showMiniMap": false
                 },
-                "content": "\u003ccenter\u003e\u003ca href=\"https://github.com/dprokop/gcon-dashboards/tree/main/grafana\" target=\"_blank\"\u003eApp platform resource exampls\u003c/a\u003e\u003ccenter\u003e",
+                "content": "\u003ccenter\u003e\u003ca href=\"https://github.com/dprokop/gcon-dashboards/tree/main/grafana\" target=\"_blank\"\u003eApp platform resource examples\u003c/a\u003e\u003ccenter\u003e",
                 "mode": "html"
               },
               "pluginVersion": "12.1.0-pre"
